@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Her Path | Breast Cancer Awareness</title>
+<style>
+:root{--pink:#ff55bd;--purple:#ad68ff;--cyan:#8be9fd;--bg:#090414;--text:#fff3ff;--muted:#d1bfdc}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{color:var(--text);background:var(--bg);font-family:"Segoe UI",Arial,sans-serif;line-height:1.7;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-40%;z-index:-3;pointer-events:none;background:radial-gradient(ellipse at 20% 20%,#a020f044,transparent 35%),radial-gradient(ellipse at 80% 30%,#ff299933,transparent 35%),radial-gradient(ellipse at 50% 80%,#3823b955,transparent 40%);animation:nebula 12s ease-in-out infinite alternate}
+@keyframes nebula{to{transform:translate(5%,-3%) rotate(12deg) scale(1.1)}}
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+a{color:inherit;text-decoration:none}.container{width:min(1100px,90%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:#090414d9;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff18}
+.nav{min-height:90px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{text-align:center;line-height:1.3;animation:logoEntrance 1.2s cubic-bezier(.16,1,.3,1) both}
+.logo-text{display:block;font-size:clamp(20px,3vw,30px);font-weight:1000;letter-spacing:2px;background:linear-gradient(90deg,#fff,#ff55bd,#ad68ff,#8be9fd,#fff);background-size:300% auto;color:transparent;-webkit-background-clip:text;background-clip:text;animation:rainbow 4s linear infinite,logoGlow 2s ease-in-out infinite alternate}
+.logo-line{display:block;width:75%;height:2px;margin:5px auto;background:linear-gradient(90deg,var(--pink),var(--purple),var(--cyan));animation:lineGlow 2s infinite alternate}
+.logo-subtitle{display:block;font-size:8px;letter-spacing:2px;color:#ead5ff}
+@keyframes logoEntrance{from{opacity:0;transform:scale(.5) rotate(-8deg);filter:blur(10px)}to{opacity:1;transform:scale(1);filter:blur(0)}}
+@keyframes rainbow{to{background-position:300% center}}
+@keyframes logoGlow{to{filter:drop-shadow(0 0 13px #ff55bd) drop-shadow(0 0 22px #ad68ff)}}
+@keyframes lineGlow{to{box-shadow:0 0 18px var(--pink)}}
+.nav-right{display:flex;align-items:center;gap:20px}.nav-links{display:flex;gap:18px;color:var(--muted);font-size:13px}.nav-links a{transition:color .3s}.nav-links a:hover{color:var(--pink)}
+.languages{display:flex;gap:4px;padding:4px;border:1px solid #ffffff22;border-radius:30px;background:#ffffff08}
+.languages button{border:0;background:transparent;color:var(--muted);padding:7px 10px;border-radius:20px;cursor:pointer}
+.languages button.active,.languages button:hover{background:linear-gradient(120deg,#9333ea,#ec4899);color:white}
+.hero{min-height:85vh;display:grid;place-items:center;text-align:center;position:relative;padding:90px 0}.hero-inner{max-width:850px}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 17px;border:1px solid #ff55bd66;background:#ff55bd0d;border-radius:40px;font-size:11px;letter-spacing:2px;margin-bottom:28px;animation:pillPulse 2s infinite alternate,rise .8s both}
+.pill span{width:8px;height:8px;background:var(--pink);border-radius:50%;box-shadow:0 0 15px var(--pink);animation:blink 1s infinite alternate}
+.hero h1{font-size:clamp(40px,7vw,78px);line-height:1.13;font-weight:950;animation:rise 1s .15s both}
+.gradient{background:linear-gradient(100deg,#ff8cd7,#c084fc,#8be9fd,#ff8cd7);background-size:300% auto;color:transparent;-webkit-background-clip:text;background-clip:text;animation:rainbow 5s linear infinite}
+.hero p{color:var(--muted);font-size:17px;max-width:670px;margin:25px auto 30px;animation:rise 1s .35s both}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:14px 25px;background:linear-gradient(110deg,#9239e9,#ed4ca8);border:1px solid #ffffff25;border-radius:50px;color:white;font-weight:750;box-shadow:0 0 25px #a855f755;transition:transform .3s,box-shadow .3s;animation:rise 1s .55s both,buttonGlow 2s 2s infinite alternate}
+.btn:hover{transform:translateY(-5px) scale(1.07);box-shadow:0 0 45px #ff55bd99}
+@keyframes rise{from{opacity:0;transform:translateY(35px);filter:blur(7px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes blink{to{opacity:.3;transform:scale(.7)}}@keyframes pillPulse{to{box-shadow:0 0 25px #ff55bd33}}@keyframes buttonGlow{to{box-shadow:0 0 35px #ff55bd77,0 0 60px #a855f733}}
+.scroll{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);color:#cdb6dc;font-size:11px;letter-spacing:3px;animation:bounce 1.5s infinite}
+@keyframes bounce{50%{margin-bottom:10px}}
+.ticker{overflow:hidden;border-block:1px solid #ffffff15;padding:13px 0;background:#ffffff06}.ticker-track{display:flex;width:max-content;animation:marquee 24s linear infinite}
+.ticker-track span{padding:0 28px;white-space:nowrap;color:#e8b6ff;letter-spacing:3px;font-size:12px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+section.content-section{padding:95px 0}.section-head{text-align:center;margin-bottom:45px}
+.eyebrow{color:var(--pink);font-size:11px;font-weight:800;letter-spacing:4px}
+.section-head h2{margin-top:12px;font-size:clamp(29px,4vw,45px);line-height:1.25;background:linear-gradient(90deg,#fff,#ff9bd8,#c9a1ff,#fff);background-size:300% auto;color:transparent;-webkit-background-clip:text;background-clip:text;animation:rainbow 8s linear infinite}
+.section-head p{max-width:660px;color:var(--muted);margin:14px auto 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;overflow:hidden;padding:30px 25px;background:linear-gradient(145deg,#241536ee,#120a20ee);border:1px solid #ffffff18;border-radius:22px;transition:transform .45s,box-shadow .45s,border-color .45s}
+.card::before{content:"";position:absolute;width:180%;height:150%;left:-160%;top:-25%;background:linear-gradient(90deg,transparent,#ff70d322,transparent);transform:rotate(25deg);transition:left .8s}
+.card:hover::before{left:120%}.card:hover{transform:translateY(-13px) scale(1.025);border-color:#ff55bd99;box-shadow:0 20px 55px #a855f733,0 0 25px #ff55bd22}
+.icon{display:grid;place-items:center;width:60px;height:60px;font-size:28px;border:1px solid #d879f966;border-radius:18px;background:linear-gradient(135deg,#9333ea44,#ec489944);margin-bottom:20px;animation:iconFloat 3s ease-in-out infinite}
+.card:nth-child(2) .icon{animation-delay:.5s}.card:nth-child(3) .icon{animation-delay:1s}
+@keyframes iconFloat{50%{transform:translateY(-9px) rotate(7deg)}}
+.card h3{font-size:20px;margin-bottom:12px}.card p{color:var(--muted);font-size:14px}
+.event-panel{position:relative;overflow:hidden;padding:42px;border:1px solid #d879f755;border-radius:28px;background:linear-gradient(130deg,#291442ee,#130b22ee);animation:panelPulse 4s infinite alternate}
+.event-panel::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#d946ef;filter:blur(110px);opacity:.2;top:-140px;right:-100px;animation:orbMove 8s infinite alternate ease-in-out}
+@keyframes panelPulse{to{box-shadow:0 0 40px #a855f722,inset 0 0 30px #ff55bd0a}}@keyframes orbMove{to{transform:translate(-120px,140px) scale(1.3)}}
+.event-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.event-item{border-left:2px solid var(--pink);padding:12px 17px}
+.event-item small{color:#e5b7fa;font-size:10px;letter-spacing:2px}.event-item h3{font-size:19px;margin-top:8px}.event-item p{color:var(--muted);font-size:13px;margin-top:5px}
+.note{position:relative;margin-top:25px;padding:15px;border-radius:12px;background:#ffffff09;border:1px solid #ffffff12;font-size:13px;color:#e8d4f5}
+.support-box{position:relative;text-align:center;overflow:hidden;border:1px solid #ffffff20;border-radius:28px;padding:50px 30px;background:radial-gradient(circle at 0% 0%,#c026d533,transparent 45%),radial-gradient(circle at 100% 100%,#7c3aed33,transparent 45%),#1b1030}
+.heart{display:inline-block;font-size:48px;animation:heartbeat 1.4s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.2)}30%{transform:scale(1)}45%{transform:scale(1.12)}}
+.support-box h2{font-size:clamp(28px,4vw,42px);margin:14px 0}.support-box p{color:var(--muted);max-width:680px;margin:auto}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:780px;margin:auto}
+.contact-item{text-align:center;padding:26px;border:1px solid #ffffff18;border-radius:20px;background:#ffffff08;transition:transform .35s,border-color .35s,box-shadow .35s}
+.contact-item:hover{transform:translateY(-8px);border-color:var(--pink);box-shadow:0 0 35px #a855f733}
+.contact-icon{font-size:30px;margin-bottom:8px;display:inline-block}.contact-item:hover .contact-icon{animation:iconFloat .6s ease}
+.contact-item p{color:#e5b7fa;overflow-wrap:anywhere}
+footer{text-align:center;border-top:1px solid #ffffff18;padding:30px 0;color:#cbb5d9;font-size:12px}.credit{color:#ff9bd8;margin-top:7px}
+.reveal{opacity:0;transform:translateY(45px) scale(.97);filter:blur(5px);transition:opacity .8s ease,transform .8s ease,filter .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+.sparkle{position:fixed;bottom:-40px;pointer-events:none;z-index:-1;animation:floatUp linear forwards;text-shadow:0 0 12px currentColor,0 0 25px currentColor}
+@keyframes floatUp{0%{opacity:0;transform:translateY(0) rotate(0)}15%{opacity:.7}85%{opacity:.35}100%{opacity:0;transform:translateY(-115vh) rotate(320deg)}}
+.click-spark{position:fixed;z-index:999;pointer-events:none;font-size:18px;transition:transform .7s ease,opacity .7s ease}
+[dir="rtl"]{font-family:Tahoma,Arial,sans-serif}[dir="rtl"] .event-item{border-left:0;border-right:2px solid var(--pink)}
+@media(max-width:760px){.nav{flex-wrap:wrap;padding:12px 0}.nav-right{width:100%;justify-content:space-between;flex-wrap:wrap}.nav-links{gap:11px;flex-wrap:wrap}.cards,.event-grid,.contact-grid{grid-template-columns:1fr}.event-panel{padding:24px}.hero{min-height:75vh}section.content-section{padding:65px 0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<header><div class="container nav">
+  <div class="logo"><span class="logo-text">FOR HER PATH</span><span class="logo-line"></span><span class="logo-subtitle">EMPOWER • SUPPORT • INSPIRE</span></div>
+  <div class="nav-right">
+    <nav class="nav-links"><a href="#home" data-t="navHome">Home</a><a href="#about" data-t="navAbout">About</a><a href="#event" data-t="navEvent">Event</a><a href="#contact" data-t="navContact">Contact</a></nav>
+    <div class="languages"><button class="active" data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="ar">عربي</button></div>
+  </div>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-inner">
+  <div class="pill"><span></span><b data-t="pill">BREAST CANCER AWARENESS</b></div>
+  <h1 data-t="heroTitle">Together, we stand<br><span class="gradient">stronger than cancer.</span></h1>
+  <p data-t="heroText">A day dedicated to awareness, solidarity, hope, and support for every woman facing breast cancer. Every gesture matters. Every voice can make a difference.</p>
+  <a class="btn" href="#event"><span data-t="heroButton">Discover Our Initiative</span> ✦</a>
+</div><div class="scroll" data-t="scroll">SCROLL TO DISCOVER ↓</div></section>
+<div class="ticker"><div class="ticker-track"><span>♡ HOPE</span><span>✦ AWARENESS</span><span>♡ SOLIDARITY</span><span>✦ EARLY DETECTION</span><span>♡ SUPPORT</span><span>✦ STRENGTH</span><span>♡ HOPE</span><span>✦ AWARENESS</span><span>♡ SOLIDARITY</span><span>✦ EARLY DETECTION</span><span>♡ SUPPORT</span><span>✦ STRENGTH</span></div></div>
+<section class="content-section" id="about"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow" data-t="aboutEyebrow">WHY WE ARE HERE</span><h2 data-t="aboutTitle">Awareness can make a difference.</h2><p data-t="aboutText">Knowledge, compassion, and support can help create a world where no woman has to face this journey alone.</p></div>
+  <div class="cards">
+    <article class="card reveal"><div class="icon">🎗️</div><h3 data-t="card1Title">Raise Awareness</h3><p data-t="card1Text">Share reliable information about breast cancer and the importance of early detection.</p></article>
+    <article class="card reveal"><div class="icon">💗</div><h3 data-t="card2Title">Offer Support</h3><p data-t="card2Text">Show patients that they are valued and surrounded by people who care about them.</p></article>
+    <article class="card reveal"><div class="icon">✨</div><h3 data-t="card3Title">Spread Hope</h3><p data-t="card3Text">Small acts of kindness can bring warmth, encouragement, and a little light to someone's day.</p></article>
+  </div>
+</div></section>
+<section class="content-section" id="event"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow" data-t="eventEyebrow">SAVE THE DATE</span><h2 data-t="eventTitle">A day for awareness and solidarity.</h2><p data-t="eventText">Join For Her Path in an initiative dedicated to breast cancer awareness and patient support.</p></div>
+  <div class="event-panel reveal"><div class="event-grid">
+    <div class="event-item"><small data-t="dateLabel">DATE</small><h3 data-t="date">October 27, 2026</h3><p data-t="day">Tuesday</p></div>
+    <div class="event-item"><small data-t="placeLabel">LOCATION</small><h3 data-t="place">Guelma General Hospital</h3><p data-t="city">Guelma, Algeria</p></div>
+    <div class="event-item"><small data-t="timeLabel">TIME</small><h3 data-t="time">To be announced</h3><p data-t="timeText">Stay tuned for updates.</p></div>
+  </div><div class="note" data-t="note">Our goal is to spread awareness, share kindness, and remind patients that they are not alone.</div></div>
+</div></section>
+<section class="content-section"><div class="container"><div class="support-box reveal"><span class="heart">💗</span><h2 data-t="supportTitle">Every woman deserves support.</h2><p data-t="supportText">Behind every diagnosis is a person with dreams, loved ones, and a story. Let's meet every patient with compassion, respect, and encouragement.</p></div></div></section>
+<section class="content-section" id="contact"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow" data-t="contactEyebrow">GET IN TOUCH</span><h2 data-t="contactTitle">Connect with For Her Path.</h2><p data-t="contactText">Follow our initiatives and reach out to our team.</p></div>
+  <div class="contact-grid"><div class="contact-item reveal"><div class="contact-icon">📷</div><h3>Instagram</h3><p>@for_her_path</p></div><div class="contact-item reveal"><div class="contact-icon">✉️</div><h3>Gmail</h3><p>forherpath@gmail.com</p></div></div>
+</div></section>
+</main>
+<footer><div class="container"><p>© 2026 For Her Path. <span data-t="footer">Together for awareness, together for hope.</span></p><p class="credit" data-t="credit">Website created by Souhaib — IT Member</p></div></footer>
+<script>
+const translations={
+en:{navHome:"Home",navAbout:"About",navEvent:"Event",navContact:"Contact",pill:"BREAST CANCER AWARENESS",heroTitle:'Together, we stand<br><span class="gradient">stronger than cancer.</span>',heroText:"A day dedicated to awareness, solidarity, hope, and support for every woman facing breast cancer. Every gesture matters. Every voice can make a difference.",heroButton:"Discover Our Initiative",scroll:"SCROLL TO DISCOVER ↓",aboutEyebrow:"WHY WE ARE HERE",aboutTitle:"Awareness can make a difference.",aboutText:"Knowledge, compassion, and support can help create a world where no woman has to face this journey alone.",card1Title:"Raise Awareness",card1Text:"Share reliable information about breast cancer and the importance of early detection.",card2Title:"Offer Support",card2Text:"Show patients that they are valued and surrounded by people who care about them.",card3Title:"Spread Hope",card3Text:"Small acts of kindness can bring warmth, encouragement, and a little light to someone's day.",eventEyebrow:"SAVE THE DATE",eventTitle:"A day for awareness and solidarity.",eventText:"Join For Her Path in an initiative dedicated to breast cancer awareness and patient support.",dateLabel:"DATE",date:"October 27, 2026",day:"Tuesday",placeLabel:"LOCATION",place:"Guelma General Hospital",city:"Guelma, Algeria",timeLabel:"TIME",time:"To be announced",timeText:"Stay tuned for updates.",note:"Our goal is to spread awareness, share kindness, and remind patients that they are not alone.",supportTitle:"Every woman deserves support.",supportText:"Behind every diagnosis is a person with dreams, loved ones, and a story. Let's meet every patient with compassion, respect, and encouragement.",contactEyebrow:"GET IN TOUCH",contactTitle:"Connect with For Her Path.",contactText:"Follow our initiatives and reach out to our team.",footer:"Together for awareness, together for hope.",credit:"Website created by Souhaib — IT Member"},
+fr:{navHome:"Accueil",navAbout:"À propos",navEvent:"Événement",navContact:"Contact",pill:"SENSIBILISATION AU CANCER DU SEIN",heroTitle:'Ensemble, nous sommes<br><span class="gradient">plus forts que le cancer.</span>',heroText:"Une journée dédiée à la sensibilisation, à la solidarité, à l'espoir et au soutien des femmes touchées par le cancer du sein.",heroButton:"Découvrir notre initiative",scroll:"DÉFILER POUR DÉCOUVRIR ↓",aboutEyebrow:"NOTRE MISSION",aboutTitle:"La sensibilisation peut faire la différence.",aboutText:"La connaissance, la compassion et le soutien peuvent aider à créer un monde où aucune femme n'affronte cette épreuve seule.",card1Title:"Sensibiliser",card1Text:"Partager des informations fiables sur le cancer du sein et l'importance du dépistage précoce.",card2Title:"Offrir du soutien",card2Text:"Montrer aux patientes qu'elles sont entourées de personnes qui se soucient d'elles.",card3Title:"Partager l'espoir",card3Text:"Les petits gestes de gentillesse peuvent apporter chaleur et encouragement.",eventEyebrow:"À VOS AGENDAS",eventTitle:"Une journée de sensibilisation et de solidarité.",eventText:"Rejoignez For Her Path pour une initiative de sensibilisation au cancer du sein et de soutien aux patientes.",dateLabel:"DATE",date:"27 octobre 2026",day:"Mardi",placeLabel:"LIEU",place:"Hôpital général de Guelma",city:"Guelma, Algérie",timeLabel:"HORAIRE",time:"À annoncer",timeText:"Restez à l'écoute.",note:"Notre objectif est de sensibiliser, de partager de la bienveillance et de rappeler aux patientes qu'elles ne sont pas seules.",supportTitle:"Chaque femme mérite du soutien.",supportText:"Derrière chaque diagnostic se trouve une personne avec des rêves, des proches et une histoire. Accueillons chaque patiente avec compassion et respect.",contactEyebrow:"CONTACT",contactTitle:"Retrouvez For Her Path.",contactText:"Suivez nos initiatives et contactez notre équipe.",footer:"Ensemble pour la sensibilisation et l'espoir.",credit:"Site créé par Souhaib — Membre IT"},
+ar:{navHome:"الرئيسية",navAbout:"من نحن",navEvent:"الفعالية",navContact:"التواصل",pill:"التوعية بسرطان الثدي",heroTitle:'معًا نقف<br><span class="gradient">أقوى من السرطان.</span>',heroText:"يوم مخصص للتوعية والتضامن والأمل ودعم كل امرأة تواجه سرطان الثدي. كل مبادرة مهمة وكل كلمة قادرة على إحداث فرق.",heroButton:"اكتشفوا مبادرتنا",scroll:"اكتشفوا المزيد ↓",aboutEyebrow:"لماذا نحن هنا؟",aboutTitle:"التوعية قادرة على إحداث الفرق.",aboutText:"تساعد المعرفة والتعاطف والدعم في بناء عالم لا تضطر فيه أي امرأة إلى مواجهة هذه الرحلة وحدها.",card1Title:"نشر الوعي",card1Text:"نشر معلومات موثوقة حول سرطان الثدي وأهمية الكشف المبكر.",card2Title:"تقديم الدعم",card2Text:"إشعار المريضات بأنهن لسن وحدهن وأن هناك من يهتم بهن.",card3Title:"نشر الأمل",card3Text:"يمكن للكلمات الطيبة والأعمال البسيطة أن تمنح الدفء والتشجيع.",eventEyebrow:"احفظوا الموعد",eventTitle:"يوم للتوعية والتضامن.",eventText:"انضموا إلى مبادرة For Her Path للتوعية بسرطان الثدي ودعم المريضات.",dateLabel:"التاريخ",date:"27 أكتوبر 2026",day:"الثلاثاء",placeLabel:"المكان",place:"المستشفى العام بقالمة",city:"قالمة، الجزائر",timeLabel:"التوقيت",time:"سيُعلن لاحقًا",timeText:"ترقبوا التفاصيل.",note:"هدفنا نشر الوعي والتضامن وتذكير المريضات بأنهن لسن وحدهن.",supportTitle:"كل امرأة تستحق الدعم.",supportText:"وراء كل تشخيص إنسانة لها أحلام وأشخاص يحبونها وقصة تستحق الاحترام. لنقدم لكل مريضة التعاطف والاحترام والتشجيع.",contactEyebrow:"تواصلوا معنا",contactTitle:"كونوا على تواصل مع For Her Path.",contactText:"تابعوا مبادراتنا وتواصلوا مع فريقنا.",footer:"معًا من أجل الوعي والأمل.",credit:"تم إنشاء الموقع من طرف صهيب — عضو الإعلام الآلي"}
+};
+function setLanguage(lang){const d=translations[lang]||translations.en;document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";document.querySelectorAll("[data-t]").forEach(el=>{const v=d[el.dataset.t];if(v!==undefined)el.innerHTML=v});document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));document.title=lang==="ar"?"For Her Path | التوعية بسرطان الثدي":lang==="fr"?"For Her Path | Sensibilisation au cancer du sein":"For Her Path | Breast Cancer Awareness"}
+document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));
+const observer=new IntersectionObserver(entries=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){entry.target.style.transitionDelay=(i%3)*120+"ms";entry.target.classList.add("visible");observer.unobserve(entry.target)}})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+const symbols=["✦","♡","✧","✿","⋆","✳"];
+function createSparkle(){const el=document.createElement("span");el.className="sparkle";el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+"vw";el.style.fontSize=(12+Math.random()*18)+"px";el.style.color=Math.random()>.5?"#ff55bd":"#ad68ff";el.style.animationDuration=(8+Math.random()*9)+"s";document.body.appendChild(el);setTimeout(()=>el.remove(),18000)}
+setInterval(createSparkle,450);
+const canvas=document.getElementById("stars"),ctx=canvas.getContext("2d");let stars=[],W,H;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;stars=Array.from({length:Math.min(110,Math.floor(W/10))},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.4,v:Math.random()*.45+.12,phase:Math.random()*Math.PI*2}))}
+function drawStars(){ctx.clearRect(0,0,W,H);for(const s of stars){s.y-=s.v;s.phase+=.025;if(s.y<0){s.y=H;s.x=Math.random()*W}const a=.25+(Math.sin(s.phase)+1)*.3;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(235,190,255,${a})`;ctx.shadowColor="#c084fc";ctx.shadowBlur=10;ctx.fill()}ctx.shadowBlur=0;requestAnimationFrame(drawStars)}
+window.addEventListener("resize",resize);resize();drawStars();
+document.addEventListener("click",e=>{if(!e.target.closest("a,button"))return;for(let i=0;i<10;i++){const el=document.createElement("span");el.className="click-spark";el.textContent=["✦","✧","♡"][i%3];el.style.left=e.clientX+"px";el.style.top=e.clientY+"px";el.style.color=i%2?"#ff55bd":"#ad68ff";document.body.appendChild(el);const a=Math.PI*2*i/10,d=35+Math.random()*45;requestAnimationFrame(()=>{el.style.transform=`translate(${Math.cos(a)*d}px,${Math.sin(a)*d}px) rotate(180deg)`;el.style.opacity="0"});setTimeout(()=>el.remove(),750)}});
+if(matchMedia("(hover:hover) and (pointer:fine)").matches){document.querySelectorAll(".card").forEach(card=>{card.addEventListener("mousemove",e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(800px) translateY(-10px) rotateX(${-y*7}deg) rotateY(${x*7}deg)`});card.addEventListener("mouseleave",()=>card.style.transform="")})}
+setLanguage("en");
+</script>
+</body>
+</html>
